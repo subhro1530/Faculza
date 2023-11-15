@@ -1,0 +1,281 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5f5; /* Light background color */
+  color: #333; /* Dark text color */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #eee; /* Light background color for navbar */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+}
+
+footer .container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.navbar-brand {
+  color: #333; /* Dark text color for navbar brand */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333; /* Dark text color for navbar links */
+  font-weight: bold;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333; /* Dark text color for underline */
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none; /* Hide the hamburger icon by default */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #eee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+/* Hero Section styles */
+.hero {
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 0, 0, 0.662); /* Adjust the opacity here */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem; /* Adjusted font size for the hero content */
+}
+
+.logo {
+  max-width: 100px; /* Adjust the size of the logos as needed */
+  margin-right: 20px;
+}
+
+/* Email Container styles */
+.email-container {
+  background-color: #eee; /* Light background color for email container */
+  color: #333; /* Dark text color for email container */
+  padding: 50px 0;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.email-updates-text {
+  opacity: 0.8; /* Adjust the opacity as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-top: 20px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.email-form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Light border color for input */
+  border-radius: 5px;
+  width: 100%;
+}
+
+.email-form button {
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.email-form button:hover {
+  background-color: #4cae4c;
+}
+
+/* Footer styles */
+footer {
+  background-color: #000000; /* Light background color for footer */
+  color: #ffffff; /* Dark text color for footer */
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #333; /* Dark text color for social icons */
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #eee; /* Light background color for mobile navbar */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger-icon {
+    display: block; /* Show the hamburger icon for mobile */
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .logo {
+    max-width: 80px; /* Adjust the size of the logos for mobile */
+    margin-right: 10px;
+  }
+
+  .sidebar {
+    width: 0;
+  }
+
+  .sidebar.show {
+    width: 250px;
+  }
+}
