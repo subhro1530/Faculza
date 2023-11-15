@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroContent = document.querySelector(".hero-content h1");
 
   function animateText() {
-    const text = "Faculza: Simplify SaaS project success";
+    const text = "Faculza: Simplifying Workflow Management";
     let index = 0;
 
     function displayText() {
